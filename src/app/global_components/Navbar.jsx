@@ -7,18 +7,22 @@ const Navbar = () => {
     {
       id: 1,
       menu: "Home",
+      href : "/home"
     },
     {
       id: 2,
       menu: "Calendar",
+      href : "/calendar"
     },
     {
       id: 3,
-      menu: "Book",
+      menu: "Favorite",
+      href : "/favorite"
     },
     {
       id: 4,
       menu: "Contact",
+      href : "/contact"
     },
   ];
 
@@ -30,7 +34,7 @@ const Navbar = () => {
       </div>
       <div className="flex text-gray-200 gap-3">
         {nav.map((navItem) => (
-          <h3 key={navItem.id} className=" font-semibold">{navItem.menu}</h3>
+          <a href={navItem.href}><h3 key={navItem.id} className=" font-semibold">{navItem.menu}</h3></a>
         ))}
       </div>
     </div>
